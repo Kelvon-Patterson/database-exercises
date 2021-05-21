@@ -23,9 +23,43 @@ USE employees;
 #           LIKE '%E%'
 # ORDER BY emp_no DESC;
 
-
 SELECT CONCAT(first_name, ' ' ,last_name)
 FROM employees
 WHERE last_name LIKE 'E%'
-   OR last_name LIKE '%E'
+   AND last_name LIKE '%E'
 LIMIT 20;
+
+SELECT *
+FROM employees
+WHERE month(birth_date) = 12
+AND day(birth_date) = 25;
+
+SELECT *
+FROM employees
+WHERE month(birth_date) = 12
+  AND day(birth_date) = 25
+AND year(hire_date) BETWEEN 1990 AND 1999;
+
+SELECT *
+FROM employees
+WHERE month(birth_date) = 12
+  AND day(birth_date) = 25
+  AND year(hire_date) BETWEEN 1990 AND 1999
+ORDER BY YEAR(hire_date) DESC;
+
+SELECT DATEDIFF( now(),hire_date)
+FROM employees
+WHERE month(birth_date) = 12
+  AND day(birth_date) = 25
+  AND year(hire_date) BETWEEN 1990 AND 1999
+
+ORDER BY YEAR(hire_date) DESC
+;
+
+
+
+
+
+
+
+
