@@ -24,21 +24,3 @@ WHERE last_name IN ('Irena', 'Maya', 'Vidya')
 ORDER BY emp_no DESC;
 
 
-# SELECT emp_no, last_name
-# FROM employees
-# WHERE last_name LIKE '%q%';
-#
-# SELECT emp_no, last_name
-# FROM employees
-# WHERE last_name LIKE 'E%'
-#    OR last_name LIKE '%E';
-#
-#
-# SELECT emp_no, last_name
-# FROM employees
-# WHERE last_name LIKE 'E%E';
-#
-# SELECT emp_no, last_name
-# FROM employees
-# WHERE last_name LIKE '%q%'
-#   AND last_name NOT LIKE '%qu%' ;

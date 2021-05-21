@@ -1,7 +1,7 @@
 USE codeup_test_db;
-
+TRUNCATE  albums;
 # DROP TABLE IF EXISTS albums;
-#
+
 # CREATE TABLE albums (
 #                         id INT UNSIGNED NOT NULL AUTO_INCREMENT,
 #                         artist_name VARCHAR(100) NOT NULL ,
@@ -40,7 +40,6 @@ values ('Michael Jackson', 'Thriller', 1982, 'Pop, Rock, R&B', 47.3),
        ('Madonna','The Immaculate Collection', 1990, 'Pop, dance', 31),
        ('Celine Dion','Lets Talk About Love', 1997, 'Pop, soft rock', 31),
        ('Metallica','Metallica', 1991, 'Heavy metal', 31),
-       ('The Beatles','1', 2000, 'Rock', 31),
        ('The Beatles','Abbey Road', 1969,' Rock', 31),
        ('James Horner','Titanic: Music from the Motion Picture', 1997, 'Film score', 30),
        ('Dire Straits','Brothers in Arms', 1985, 'Roots rock, blues rock, soft rock', 30),
@@ -51,3 +50,4 @@ values ('Michael Jackson', 'Thriller', 1982, 'Pop, Rock, R&B', 47.3),
        ('ABBA','Gold: Greatest Hits', 1992, 'Pop, disco', 30),
        ('Bruce Springsteen','Born in the U.S.A.', 1984, 'Heartland rock', 30),
        ('Pink Floyd','The Wall', 1979, 'Progressive rock', 30);
+ SELECT * FROM albums;
