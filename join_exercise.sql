@@ -48,6 +48,16 @@ ON e.emp_no = s.emp_no
 WHERE dm.to_date  > NOW()
 AND s.to_date > NOW();
 
+SELECT CONCAT(e.first_name, ' ', e.last_name) AS Employee, d.dept_name AS 'Department', CONCAT(e.first_name,' ', e.last_name) AS 'Department Manager'
+FROM employees e
+JOIN dept_manager dm
+ON e.emp_no = dm.emp_no
+JOIN departments d
+ON dm.dept_no = d.dept_no
+JOIN dept_emp de
+ON e.emp_no = de.emp_no
+WHERE dm.to_date > NOW()
+AND de.to_date > NOW();
 
 
 
